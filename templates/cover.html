@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cover Letter</title>
+</head>
+<body>
+	<p>Dear {{ Contact }}</p>
+	<p>My name is Tara Yoo and I'm writing to apply to {{JobName}}.
+	{% if Referred%}
+		I heard about the position from {{Referral}} who encouraged me to apply.
+	{% endif %}
+	I am a Massachusetts CPA with experience in Python, Flask web apps, VBA, SQL, and Bootstrap. I excelled at learning new technologies, automating processes, and providing technical support to my team in my previous roles. I would bring the same attention to detail and ability to learn to this role.</p>
+	<p>In my previous roles as Tax Accountant, I constantly taught myself new accounting processes, tax laws, and technology against tight deadlines and minimal guidance. I often finished my projects earlier than expected by automating key steps.<br>At EY, I leveraged advanced Excel formulas and VBA to clean up and analyze 5000+ sales invoice data to project clients’ sales and use tax liabilities. These sales and use tax projects involved legal research to determine taxability of different types of assets, data consolidation, clean up, and analysis. I automated data aggregation by using the command line to merge csv files and taught other staff how to do the same. At Global Atlantic, I decreased the time needed for the process by 50% by automating pdf page extraction through VBA. I also identified an additional $20,000 in Foreign Tax Credits using the time I saved.</p>
+	<p>Outside of work, I worked on personal projects such as
+		{{Projects[0].name}} using {{Projects[0].tech}}
+		{%if Projects|length>1%}
+			and {{Projects[1].name}} using {{Projects[1].tech}}
+		{%endif%}
+	</p>
+	<p>{{Reason}}</p>
+	<p>My resume and references are attached. You can reach me at any time via email at yootar@gmail.com or via my cell phone, 413-695-9086. Thank you for your consideration. I look forward to speaking with you.</p>
+	<p>Sincerely,</p>
+	<p>Tara Yoo	</p>
+</body>
+</html>
